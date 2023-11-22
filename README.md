@@ -1,2 +1,2 @@
-# Labs and Programs from my Data Structures and Algorithims class
 
+these are labs and programs from my data structures and algorithims class
