@@ -1,3 +1,2 @@
-# CS010C
-# cs010c
-# CS10C
+
+these are labs and programs from my data structures and algorithims class
