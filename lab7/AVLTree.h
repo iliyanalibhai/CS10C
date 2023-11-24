@@ -13,6 +13,21 @@ class AVLTree {
         int balanceFactor(Node* ); // returns balance factor of a given node
         void printBalanceFactors(); // Traverse and print the tree in inorder notation. Print the string followed by its balance factor in parentheses followed by a , and one space.
         void visualizeTree(const string &);
+        // copy constructor
+        AVLTree (Node* &copy) = delete;
+        // copy assignment
+        AVLTree & operator=(const Node* &copy) = delete; 
+        // deconstructor
+        ~AVLTree() {
+            destroyTree(root);
+        }
+        void destroyTree(Node* node) {
+            if (node != nullptr) {
+                destroyTree(node->left);
+                destroyTree(node->right);
+                delete node;
+            }
+        }
     private:
         Node* root;
         void rotate(Node* ); // Implement four possible imbalance cases and update the parent of the given node
