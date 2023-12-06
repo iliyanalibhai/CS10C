@@ -9,7 +9,11 @@ private:
 
 public:
   Tree();
-  ~Tree(); // deconstructor will use private helper
+  ~Tree(); // DECONSTRUCTOR will use private helper
+  // COPY CONSTRUCTOR
+  Tree(const Tree &copy) = delete;
+  // COPY ASSIGNMENT OPERATOR
+  Tree & operator=(const Tree &copy) = delete; 
   void insert(const string &);
   void preOrder( ) const;
   void inOrder( ) const;
